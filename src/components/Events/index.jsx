@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const Events = ({searchTerm})=>{
-const {events}=useEventsData();
+const {events, isloading, error}=useEventsData();
 
 
     const handleEventItemClick = (id)=>{
@@ -26,6 +26,13 @@ const {events}=useEventsData();
         onEventClick={handleEventItemClick} 
          id={eventItem.id}
          />))
+    };
+
+    if(error){
+       return <div>Ha ocurrido un error</div>
+    };
+    if(isloading){
+       return <div>Cargando resultados...</div>
     }
 
 
