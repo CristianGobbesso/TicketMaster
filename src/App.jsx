@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Events from './components/Events'
 import Navbar from './components/Navbar'
-import SignupForm from './components/Events/components/SignupForm'
+
 
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
 console.log(searchTerm,10)
   return (
     <>
-    {/* <Navbar onSearch={handleNavbarSearch}  />
-    <Events searchTerm={searchTerm}  /> */}
-    <SignupForm />
+     <Navbar onSearch={handleNavbarSearch}  />
+    <Events searchTerm={searchTerm}  /> 
+   
     </>
   )
 }
